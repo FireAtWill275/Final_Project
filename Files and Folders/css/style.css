@@ -67,6 +67,7 @@ header {
   background:#121212;;
   padding: 25px 0;
   overflow: hidden;
+
 }
 header .logo {
   color: #fff;
@@ -116,6 +117,10 @@ h2 a {
 
 .post img {
   margin-bottom: 30px;
+ 
+}
+aside img, .post img{
+  border-radius: 100px;
 }
 .post p {
   font-size: 24px;
@@ -149,6 +154,16 @@ h2 a {
   text-align: center;
   display: block;
   margin: 0 auto;
+
+}
+  li:hover{
+  cursor:pointer;
+}
+  .button:hover{
+  cursor:pointer;
+}
+ .radio:hover{
+  cursor:pointer;
 }
 .yellow {
   color: #033048;
@@ -182,12 +197,25 @@ h2 a {
   font-weight: 600;
 }
 
-#bottom-cta {
+#bottom-cta, form {
   background: darkgrey;
   padding: 30px;
   text-align: center;
   margin-top: 50px;
 }
+#legal{
+  padding: 30px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 12px;
+  color: white;
+}
+#legal-asterisk, p, ul, li{
+  text-align: center;
+  font-size: 8px;
+  color: white;
+}
+
 
 footer {
   background: #121212;
@@ -212,13 +240,161 @@ footer p {
   display: none;
 }
 
+#lastbutton{
+  width:300px;
+  font-size:50px;
+
+}
+
+.line {
+    display:block;
+    width:40px;
+    height:5px;
+    border-radius:50px;
+    margin-bottom:10px;
+    background-color:#BBBBBB;
+}
+
+
+
+
 /******************************************
-/* ADDITIONAL STYLES
+/* Carousel
+/*******************************************/
+
+#carousel {
+  /*Set the container carousel to be fullscreen. If you change the size
+  of your carousel make sure to also change the size of your slides*/
+  height: 100vh;
+  width: 100vw;
+  /*Prevent images from wrapping*/
+  white-space: nowrap;
+  overflow: hidden;
+  /*Allow children to be positioned relatively*/
+  position: relative;
+}
+
+.slide-image {
+  /*Make the image container full screen*/
+  width: 100vw;
+  height: 100vh;
+  /*Make the image cover the the screen and center it*/
+  background-position: center;
+  background-size: cover;
+  /*Make images inline with each other*/
+  display: inline-block;
+}
+
+.arrow {
+  width: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#right-arrow {
+  right: 20px;
+}
+
+#left-arrow {
+  left: 20px;
+}
+
+#slide1 {
+  background-image: url('../images/IMG_1648.jpg');
+}
+
+#slide2 {
+  background-image: url('../images/IMG_1666.jpg');
+}
+
+#slide3 {
+  background-image: url('../images/IMG_1674.jpg');
+}
+
+#slide4 {
+  background-image: url('../images/IMG_1687.jpg');
+}
+
+#slide5 {
+  background-image: url('../images/IMG_1694.jpg');
+}
+
+
+/******************************************
+/* Mobile Menu
 /*******************************************/
 
 
-@media screen and (max-width:930px){
-  body{
-    width:100%;
+@media screen and (max-width:768px){ 
+  
+
+
+  .container {
+    width: 100%;
+    position:relative;
+    
   }
+ h1,h2,h3, .post p{
+    font-size: 1em;
+  }
+ /*   .container {
+    font-size: 1em;
+  }*/
+  article {
+    margin: 0;
+    padding:0;
+  }
+  article, aside {
+    width: 100%;
+    float: none;
+
+  }
+  aside{
+    text-align: center;
+  }
+
+/******************************************
+/* Hamburger 
+/*******************************************/
+
+nav ul li:first-child {
+    display: block;
+}
+
+nav.show {
+    height:12em;
+
+  }
+
+nav {
+  float:none;
+  display: inline-block;
+  width:100%;
+  text-align: center;
+  transition: 1s;
+  height: 0;
+  overflow: hidden;
+
+}
+
+nav ul {
+  display: block;
+}
+
+nav ul li {
+    float:none;
+}
+  nav ul li:first-child {
+      display: block;
+
+}
+
+  nav ul li:first-child:hover{
+  cursor:pointer;
+}
+
+}
+
 
